@@ -1,0 +1,15 @@
+{
+  "name": "decoyshield",
+  "version": "1.0.0",
+  "description": "DecoyShield ransomware early-warning monitor with backend API and frontend dashboard",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "node --watch backend/server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.8",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.2"
+  }
+}

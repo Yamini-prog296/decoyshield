@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DecoyShield Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">PROACTIVE RANSOMWARE DEFENSE</p>
+        <h1>DecoyShield</h1>
+      </div>
+      <span id="statusBadge" class="badge offline">Offline</span>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <div>
+          <p class="label">EARLY THREAT WARNING</p>
+          <h2>Monitor decoy files before attackers reach your real data.</h2>
+          <p class="subtitle">
+            DecoyShield creates harmless canary files and immediately warns you when
+            those files change unexpectedly.
+          </p>
+        </div>
+        <button id="scanBtn" class="primary-btn">Run Manual Scan</button>
+      </section>
+
+      <section class="stats-grid">
+        <article class="stat-card">
+          <span class="stat-label">ENGINE</span>
+          <strong id="engineState">Stopped</strong>
+          <small id="directoryPath">—</small>
+        </article>
+        <article class="stat-card">
+          <span class="stat-label">CURRENT RISK</span>
+          <strong id="riskLevel">LOW</strong>
+          <small>Recent decoy signals</small>
+        </article>
+        <article class="stat-card">
+          <span class="stat-label">FILES SCANNED</span>
+          <strong id="filesScanned">0</strong>
+          <small>Protected canaries</small>
+        </article>
+        <article class="stat-card">
+          <span class="stat-label">ALERTS</span>
+          <strong id="alertCount">0</strong>
+          <small>High priority incidents</small>
+        </article>
+      </section>
+
+      <section class="panel">
+        <div class="panel-header">
+          <h3>Recent Threat Signals</h3>
+          <span>Live feed</span>
+        </div>
+        <div id="eventList" class="event-list">
+          <p class="empty-state">No suspicious activity detected.</p>
+        </div>
+      </section>
+
+      <section class="info-box">
+        <h3>How it works</h3>
+        <p>
+          The system tracks the hash of decoy files and checks for rapid changes,
+          deletions, unusual extensions, and suspicious file creation patterns.
+          These are warning signals, not destructive actions.
+        </p>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
